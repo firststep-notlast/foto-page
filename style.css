@@ -5,8 +5,8 @@
 }
 
 body {
-    font-family: 'Roboto Slab';
-    /* overflow: hidden; */
+    font-family: var(--primary_font);
+    color: var(--additional)
 }
 
 /* variables */
@@ -14,17 +14,24 @@ body {
     --primary: #E3D7D7;
     --secondary: #7A7A7A;
     --additional: #54595F;
+    --primary_font: 'Roboto Slab';
+    --secondary_font: 'Rubik Regular';
 }
 
 /* fonts */
 @font-face {
-    font-family: 'Rubik Regular';
-    src: url("assets/fonts/Rubik-Regular.ttf")format("ttf"),
+    font-family: Rubik Regular;
+    src: url("assets/fonts/Rubik-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'Roboto Slab';
-    src: url("assets/fonts/RobotoSlab-VariableFont_wght.ttf")format("ttf"),
+    font-family: Roboto Slab;
+    src: url("assets/fonts/RobotoSlab-VariableFont_wght.ttf");
+}
+
+@font-face {
+    font-family: Roboto Condensed;
+    src: url(assets/fonts/RobotoCondensed-Regular.ttf);
 }
 
 /* mobile styles */
@@ -99,7 +106,7 @@ i.fas {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     color: var(--secondary);
     text-transform: uppercase;
     font-weight: 600;
@@ -150,7 +157,7 @@ i.fas {
 .home_quote {
     color: var(--primary);
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 2%;
     font-size: 0.9rem;
     letter-spacing: 2px;
@@ -160,13 +167,49 @@ i.fas {
 
 }
 
-.test {
+.about_me {
     position: relative;
-    height: 300px;
-    width: 100vw;
+    overflow-x: hidden;
+    padding: 50px 25px;
+    font-family: var(--secondary_font);
+    text-align: center;
+}
+
+.about_me_leaf {
+    height: 80px;
+    width: auto;
+    text-align: center;
+}
+
+.about_me_leaf img {
+    max-height: 100%;
+    max-width: 200px;
+    opacity: 0.6;
+}
+
+.about_me_header {
+    text-transform: uppercase;
+    font-size: 1.6em;
+    padding: 30px 0;
+}
+
+.about_me_line {
+    display: block;
+    height: 2px;
+    width: 30vw;
+    background-color: var(--primary);
+    margin: auto;
 
 }
 
+.about_me_description {
+    line-height: 1.8em;
+    padding: 30px 0;
+}
+
+.about_me img {
+    max-width: 80%;
+}
 
 
 /* small tablet styles */
