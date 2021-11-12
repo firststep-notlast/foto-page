@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My page</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="assets/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="assets/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+    <link 
  </head>
 <body>
     <nav class="menu">
@@ -17,38 +19,100 @@
         </div>
         <div class="menu_nav">
             <ul class="menu_list">
-                <li class="menu_item"><a class="menu_link" href="#">Home</a></li>
-                <li class="menu_item"><a class="menu_link" href="#">Poznajmy się</a></li>
-                <li class="menu_item"><a a class="menu_link" href="#">Portfolio</a></li>
-                <li class="menu_item"><a a class="menu_link" href="#">Oferta</a></li>
-                <li class="menu_item"><a a class="menu_link" href="#">Kontakt</a></li>
+                <li class="home_section"><a class="menu_link" href="#">Home</a></li>
+                <li class="about_me_section"><a class="menu_link" href="#">Poznajmy się</a></li>
+                <li class="portfolio_section"><a a class="menu_link" href="#">Portfolio</a></li>
+                <li class="offer_section"><a a class="menu_link" href="#">Oferta</a></li>
+                <li class="contact_section"><a a class="menu_link" href="#">Kontakt</a></li>
             </ul>
         </div>
     </nav>
 
 <main class="main">
-    <header class="home">
+    <header class="home" id ="home_section">
         <article class="home_quote">
         Fotografia jest sposobem odczuwania, dotykania, kochania. To, co złapałeś na filmie, zostało uwiecznione na zawsze… 
         Zapamiętuje małe rzeczy, długo po tym, jak zapomniałeś wszystkiego.  Aaron Siskindl
         </article>
     </header>
-    <section class="about_me">
+    <section class="about_me" id="about_me_section">
         <div class="about_me_leaf"><img src="assets/img/listek.png" alt=""></div>
         <h2 class="about_me_header">Cześć, jestem Kinga</h2>
         <div class="about_me_line"></div>
         <p class="about_me_description">Miło mi Cię tutaj gościć! <br>
-            Fotografia to ułamek sekundy, a moim celem jest zatrzymanie ulotnych chwil w jak najpiękniejszej formie.
+            Zajmuję się fotografią, która jest moją wielką pasją.Utożsamiam się ze stwierdzeniem, ze fotograf to obserwator z aparatem. Fotografia to ułamek sekundy, a moim celem jest zatrzymanie ulotnych chwil w jak najpiękniejszej formie.
             Uchwycenie emocji, ciepła, uśmiechu, niepowtarzalności danego momentu to coś w co wkładam całe serce podczas sesji.
-            Nazywam się Kinga i zajmuję się fotografią, która jest moją wielką pasją.
-            Utożsamiam się ze stwierdzeniem, ze fotograf to obserwator z aparatem.
+                  
         </p>
-        <div class="about_me_img">
-            <img src="assets/img/me.jpg" alt="me">
+        <div class="about_me_img_container">
+            <img class= "img_me"src="assets/img/me.jpg" alt="me">
+        </div>
+        <div class="about_me_arrow">
+            <span></span><span></span><span></span>
         </div>
     </section>
+    <section class="portfolio" >
+        <div id="portfolio_section"></div>
+<div class="portfolio_leaf"><img src="assets/img/listek3.png" alt=""></div>
+        <h2 class="portfolio_header">Portfolio</h2>
+        <p class="portfolio_quote">Fotografie to kęsy czasu, które można wziąć do ręki...</p>
+<div class="gallery"> 
+    <a href="assets/img/portfolio/1.JPG" data-lightbox="mygallery" data-title="Photo 1" ><img src="assets/img/portfolio/1_small.jpg" alt="first pic"></a>
+    <a href="assets/img/portfolio/2.JPG" data-lightbox="mygallery" data-title="Photo 2"> <img src="assets/img/portfolio/2_small.jpg" alt="sec pic"></a>
+    <a href="assets/img/portfolio/3.JPG" data-lightbox="mygallery" data-title="Photo 3"> <img src="assets/img/portfolio/3_small.jpg" alt="3 pic"></a>
+    <a href="assets/img/portfolio/4.JPG" data-lightbox="mygallery" data-title="Photo 4"> <img src="assets/img/portfolio/4_small.jpg" alt="4 pic"></a>
+    <a href="assets/img/portfolio/5.JPG" data-lightbox="mygallery" data-title="Photo 5"> <img src="assets/img/portfolio/5_small.jpg" alt="5 pic"></a>
+     <a href="assets/img/portfolio/1.JPG" data-lightbox="mygallery" data-title="Photo 1" ><img src="assets/img/portfolio/1_small.jpg" alt="first pic"></a>
+    <a href="assets/img/portfolio/2.JPG" data-lightbox="mygallery" data-title="Photo 2"> <img src="assets/img/portfolio/2_small.jpg" alt="sec pic"></a>
+    <a href="assets/img/portfolio/3.JPG" data-lightbox="mygallery" data-title="Photo 3"> <img src="assets/img/portfolio/3_small.jpg" alt="3 pic"></a>
+    <a href="assets/img/portfolio/4.JPG" data-lightbox="mygallery" data-title="Photo 4"> <img src="assets/img/portfolio/4_small.jpg" alt="4 pic"></a>
+    <a href="assets/img/portfolio/5.JPG" data-lightbox="mygallery" data-title="Photo 5"> <img src="assets/img/portfolio/5_small.jpg" alt="5 pic"></a>
+</div>
+<!-- <i class="fas fa-chevron-down"></i> -->
+
+</section>
+<section class="offer" id="offer_section">
+    <h2 class="offer_header">Jak wygląda oferta?</h2>
+    <div class="offer_line"></div>
+    <!-- <p class="offer_text">W ofercie są sesje:</p> -->
+      <ul class="offerlist"> <p>W ofercie są sesje:</p>
+          <li class="offeritem"><i class="far fa-heart"></i> portretowe</li>
+          <li class="offeritem"><i class="far fa-heart"></i> lifestyl'owe</li>
+          <li class="offeritem"><i class="far fa-heart"></i> rodzinne</li>
+          <li class="offeritem"><i class="far fa-heart"></i> narzeczeńskie</li>
+          <li class="offeritem"><i class="far fa-heart"></i> fotografia wieczorów panieńskich/kawalerskich</li>
+      </ul>
+</section>
+<section class="contact" id="contact_section">
+    <ul class="contact_data">
+        <li>Kinga Zawistowska</li>
+        <li>e-mail: zawistowskakinga@gmail.com</li>
+        <li>telefon: 507 820 215</li>
+        </ul> 
+   <p class="copyright">&copy 2021 | Kinga Zawistowska Fotografia | Wszelkie prawa zastrzeżone</p>     
+          
+</section>
+
 </main>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
+<script src="js/lightbox-plus-jquery.min.js"></script>
+<script src="jquery/jquery-3.6.0.min.js"></script>
+<script>
+// scrollowanie
+    $('.menu_list li').on('click', function(){
+      const goToSection = "#" + $(this).attr('class');
+      $('body, html').animate({
+            scrollTop:$(goToSection).offset().top    
+        }, 1000),
+        bars()
+})
+function bars(){
+        $( '.menu_nav' ).removeClass( "show" )
+        $('.fa-bars').addClass("show")
+        $('.fa-times').removeClass("show")
+    }
+</script>
+ 
 </body>
 </html>
