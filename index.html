@@ -94,25 +94,8 @@
 </section>
 
 </main>
-
-<script src="js/script.js"></script>
 <script src="js/lightbox-plus-jquery.min.js"></script>
 <script src="jquery/jquery-3.6.0.min.js"></script>
-<script>
-// scrollowanie
-    $('.menu_list li').on('click', function(){
-      const goToSection = "#" + $(this).attr('class');
-      $('body, html').animate({
-            scrollTop:$(goToSection).offset().top    
-        }, 1000),
-        bars()
-})
-function bars(){
-        $( '.menu_nav' ).removeClass( "show" )
-        $('.fa-bars').addClass("show")
-        $('.fa-times').removeClass("show")
-    }
-</script>
- 
+<script src="js/script.js"></script>
 </body>
 </html>

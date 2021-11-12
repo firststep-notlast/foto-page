@@ -9,6 +9,37 @@ iconX.classList.toggle("show");
 menu_nav.classList.toggle("show");
 })
 
+// scrollowanie
+$('.menu_list li').on('click', function(){
+    const goToSection = "#" + $(this).attr('class');
+    $('body, html').animate({
+          scrollTop:$(goToSection).offset().top    
+      }, 1000),
+      bars()
+})
+function bars(){
+      $( '.menu_nav' ).removeClass( "show" )
+      $('.fa-bars').addClass("show")
+      $('.fa-times').removeClass("show")
+  }
 
+//   animacja linii
+$(document).on('scroll', function(){
+    const windowHeight = $(window).height();
+    const scrollValue = $(this).scrollTop();
+    
+    const $aboutMeLine = $('.about_me_line');
+    const descriptionTopOffset=  $('.about_me_description').offset().top
+    const $offerLine = $('.offer_line');
+    const offerTopOffset=  $('.offerlist').offset().top
+
+    if (scrollValue > descriptionTopOffset - windowHeight) {
+              $aboutMeLine.addClass('active');
+      }
+
+      if (scrollValue > offerTopOffset - windowHeight) {
+        $offerLine.addClass('active');
+}
+})
     
   

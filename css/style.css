@@ -141,6 +141,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: var(--secondary_font);
     overflow: hidden;
 
 }
@@ -177,6 +178,7 @@ body {
     text-align: center;
     margin: auto;
     font-size: 0.8em;
+
 }
 
 .about_me_leaf {
@@ -201,9 +203,16 @@ body {
 .about_me_line {
     display: block;
     height: 2px;
-    width: 30vw;
+    width: 0vw;
     background-color: var(--primary);
     margin: 20px auto;
+    /* transform: translateX(-100vw); */
+    transition: 2s;
+}
+
+.about_me_line.active {
+    width: 30vw;
+    /* transform: translateX(0); */
 }
 
 .about_me_description {
@@ -214,7 +223,7 @@ body {
     max-height: 30vh;
     border-radius: 10%;
     box-shadow: 4px 4px 8px 4px var(--secondary);
-    margin: 30px auto;
+    margin: 30px auto 40px;
 }
 
 .about_me_arrow {
@@ -332,7 +341,7 @@ body {
 
 .offer {
     margin: auto;
-    padding: 30px;
+    padding: 70px;
     text-align: center;
     font-family: var(--secondary_font);
     background-image: url(../assets/img/tlotest.png);
@@ -343,9 +352,14 @@ body {
 .offer_line {
     display: block;
     height: 1px;
-    width: 30vw;
+    width: 0;
     background-color: var(--primary);
     margin: 25px auto;
+    transition: 2s;
+}
+
+.offer_line.active {
+    width: 30vw;
 }
 
 .offerlist {
@@ -363,6 +377,7 @@ body {
 }
 
 .contact {
+    font-family: var(--secondary_font);
     background-image: url(../assets/img/contact_background.jpg);
     padding-top: 10px;
     text-align: center;
