@@ -8,6 +8,12 @@ body {
     font-family: var(--primary_font);
     color: var(--additional);
     font-size: 16px;
+    max-width: 2000px;
+
+}
+
+html {
+    scroll-behavior: smooth;
 
 }
 
@@ -102,7 +108,8 @@ body {
     transition: .5s;
     z-index: 1;
     padding: 30px;
-    box-shadow: 3px 3px 6px black;
+    /* box-shadow: 3px 3px 6px black; */
+
 }
 
 .menu_list {
@@ -164,7 +171,7 @@ body {
     left: 2%;
     font-size: 0.8em;
     letter-spacing: 2px;
-    line-height: 1.5rem;
+    line-height: 1.6em;
     font-weight: 100;
     padding: 1%;
 
@@ -224,7 +231,6 @@ body {
     text-align: center;
     margin: auto;
     font-size: 0.8em;
-
 }
 
 .about_me_leaf {
@@ -236,7 +242,7 @@ body {
 
 .about_me_leaf img {
     max-height: 100%;
-    max-width: 60px;
+    max-width: 100%;
     opacity: 0.6;
 
 }
@@ -305,32 +311,27 @@ body {
 
 .portfolio_quote {
     line-height: 1.8em;
+    padding-bottom: 20px;
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 100px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    align-content: center;
-    grid-gap: 10px;
-    transition: 1s;
-    padding: 50px;
-    padding-bottom: 20px;
-    overflow: hidden;
 }
 
 .gallery a {
     display: block;
-    text-align: center;
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
+    padding: 1% 1%;
+    cursor: pointer;
 }
 
 .gallery img {
-    width: 100px;
-    height: auto;
-    cursor: pointer;
+    overflow: hidden;
+    height: 100px;
+    transition: 1s;
 }
 
 .gallery img:hover {
@@ -398,16 +399,91 @@ body {
 
 .copyright {
     margin-top: 10px;
-    font-size: 0.4em;
+    font-size: 0.8em;
 }
 
 /* small tablet styles */
-@media screen and (min-width: 620px) {}
+@media screen and (min-width: 620px) {
+    body {
+        font-size: 18px;
+    }
+
+    .about_me_leaf,
+    .portfolio_leaf {
+        height: 60px;
+        width: auto;
+    }
+
+    .gallery img {
+        height: 120px;
+    }
+}
 
 
 /* large tablet & laptop styles */
-@media screen and (min-width: 960px) {}
+@media screen and (min-width: 960px) {
 
+
+    .menu_burger {
+        display: none;
+    }
+
+    .menu_nav {
+        transform: translate(0);
+        top: 0;
+        background-color: transparent;
+
+    }
+
+    .menu_list {
+        flex-direction: row;
+        justify-content: flex-end;
+        line-height: 1.2em;
+        padding: 0 20px;
+        height: auto;
+    }
+
+    .menu_link {
+        padding: 0 10px;
+    }
+
+    .menu_link:hover {
+        opacity: 0.7;
+    }
+
+    .about_me_wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 30px 15%;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+
+    }
+
+    .about_me_description {
+        padding: 0 50px;
+    }
+
+    .img_me {
+        margin: 0 auto;
+    }
+
+    .gallery img {
+        height: 150px;
+    }
+}
 
 /* desktop styles */
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
+
+    .menu_logo {
+        padding-left: 50px;
+    }
+
+
+
+    .gallery img {
+        height: 180px;
+    }
+}

@@ -14,7 +14,7 @@ $('.menu_list li').on('click', function(){
     const goToSection = "#" + $(this).attr('class');
     $('body, html').animate({
           scrollTop:$(goToSection).offset().top    
-      }, 1000),
+      },1000),
       bars()
 })
 function bars(){
@@ -42,4 +42,11 @@ $(document).on('scroll', function(){
 }
 })
     
+// powrót do strony głównej po naciśnięciu logo
+const logo = document.querySelector(".menu_logo");
+const main = document.querySelector(".main");
+let windowTop = main.offsetTop; 
+logo.addEventListener("click", function(){
+  window.scrollTo(0,0);
+  })
   
