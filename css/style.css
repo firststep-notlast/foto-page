@@ -82,21 +82,19 @@ html {
 
 .menu_logo {
     color: var(--additional);
-    text-transform: uppercase;
     position: absolute;
-    top: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    letter-spacing: 3px;
-    font-weight: 800;
-    opacity: 0.8;
-    font-size: 0.8em;
+    top: 50%;
+    transform: translateY(-40%);
 }
 
-.menu_logo p:nth-child(2) {
-    font-size: 0.6em;
+.menu_logo img {
+    height: 60px;
 }
+
+
+/* .menu_logo p:nth-child(2) {
+    font-size: 0.6em;
+} */
 
 .menu_nav {
     position: fixed;
@@ -298,9 +296,13 @@ html {
 
 .offer {
     margin: auto;
-    width: 90%;
+    width: 100%;
     text-align: center;
     font-size: 0.8em;
+    /* background-image: url(../assets/img/mid-eclipsejpg.jpg); */
+    background-position: cover;
+
+    /* background-repeat: repeat; */
 }
 
 .offer_header {
@@ -429,22 +431,56 @@ html {
     font-size: 2.5em;
 }
 
-
-
 .contact {
-    font-family: var(--secondary_font);
     background-image: url(../assets/img/contact_background.jpg);
-    padding-top: 10px;
+    background-position: cover;
+    margin-top: 50px;
     text-align: center;
     font-size: 0.6em;
     line-height: 2em;
     position: relative;
+    width: 100vw;
+
+}
+
+.contact_header {
+    font-size: 1.4em;
+    padding: 10px 0;
+}
+
+.contact-col input,
+.contact-col textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 3px auto;
+    border: none;
+    font-size: 1.4em;
+    box-shadow: 3px 2px 3px #7A7A7A;
+    background-color: #f5eeee;
+}
+
+.contact-col input:focus,
+.contact-col textarea:focus {
+    border: none;
+
+}
+
+.contact-col button {
+    padding: 5px 10px;
+    color: var(--additional) border: 1px solid #7A7A7A;
+    box-shadow: 3px 2px 3px #7A7A7A;
+    background-color: #f5eeee;
 }
 
 .contact_data {
+    margin-top: 10px;
     list-style: none;
     opacity: 1;
     z-index: 3;
+}
+
+git address .contact i {
+    font-size: 9px;
 }
 
 .copyright {
