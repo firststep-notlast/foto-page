@@ -89,6 +89,7 @@ html {
 
 .menu_logo img {
     height: 60px;
+    width: auto;
 }
 
 
@@ -131,7 +132,7 @@ html {
 
 .main {
     position: relative;
-    top: 10vh;
+    top: 10%;
     left: 0;
     width: 100%;
 }
@@ -299,10 +300,6 @@ html {
     width: 100%;
     text-align: center;
     font-size: 0.8em;
-    /* background-image: url(../assets/img/mid-eclipsejpg.jpg); */
-    background-position: cover;
-
-    /* background-repeat: repeat; */
 }
 
 .offer_header {
@@ -455,7 +452,7 @@ html {
     margin: 3px auto;
     border: none;
     font-size: 1.4em;
-    box-shadow: 3px 2px 3px #7A7A7A;
+    box-shadow: 3px 2px 3px #a8a2a2;
     background-color: #f5eeee;
 }
 
@@ -467,9 +464,11 @@ html {
 
 .contact-col button {
     padding: 5px 10px;
-    color: var(--additional) border: 1px solid #7A7A7A;
-    box-shadow: 3px 2px 3px #7A7A7A;
+    color: var(--additional);
+    border: none;
+    box-shadow: 3px 2px 3px #a8a2a2;
     background-color: #f5eeee;
+    font-size: 1em;
 }
 
 .contact_data {
