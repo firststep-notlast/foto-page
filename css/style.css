@@ -445,15 +445,22 @@ html {
     padding: 10px 0;
 }
 
+.contact-col form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .contact-col input,
 .contact-col textarea {
     width: 80%;
     padding: 10px;
     margin: 3px auto;
     border: none;
-    font-size: 1.4em;
+    font-size: 1.2em;
     box-shadow: 3px 2px 3px #a8a2a2;
     background-color: #f5eeee;
+    font-family: var(--secondary_font);
 }
 
 .contact-col input:focus,
@@ -469,6 +476,7 @@ html {
     box-shadow: 3px 2px 3px #a8a2a2;
     background-color: #f5eeee;
     font-size: 1em;
+    width: 100px;
 }
 
 .contact_data {
